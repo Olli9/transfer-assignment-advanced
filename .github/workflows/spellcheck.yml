@@ -1,0 +1,16 @@
+name Spellcheck
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  spellcheck:
+    runs-on:  ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Spellcheck
+        uses: crate-ci/typos@v1.29.10
